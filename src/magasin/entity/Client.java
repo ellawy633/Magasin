@@ -12,13 +12,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
  * @author admin
  */
 @Entity
-public class Client implements Serializable {
+public class Client  implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
@@ -41,6 +42,10 @@ public class Client implements Serializable {
     private String mdp;
   
     private String email;
+    @OneToMany(mappedBy = " ")
+    
+    
+    
  
     
     
@@ -50,6 +55,38 @@ public class Client implements Serializable {
 
     public Long getId() {
         return id;
+    }
+
+    public Adresse getAdrfacte() {
+        return adrfacte;
+    }
+
+    public void setAdrfacte(Adresse adrfacte) {
+        this.adrfacte = adrfacte;
+    }
+
+    public String getLogin() {
+        return Login;
+    }
+
+    public void setLogin(String Login) {
+        this.Login = Login;
+    }
+
+    public String getMdp() {
+        return mdp;
+    }
+
+    public void setMdp(String mdp) {
+        this.mdp = mdp;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setId(Long id) {
