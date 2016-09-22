@@ -35,6 +35,13 @@ public class Categorie implements Serializable {
     
     @OneToMany(mappedBy = "category")
     private List< Produit>produits =new ArrayList<>();
+    
+    
+    
+    
+    
+    
+    
 
     public List<Produit> getProduits() {
         return produits;

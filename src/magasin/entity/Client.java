@@ -6,6 +6,8 @@
 package magasin.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -42,8 +44,16 @@ public class Client  implements Serializable {
     private String mdp;
   
     private String email;
-    @OneToMany(mappedBy = " ")
-    
+    @OneToMany(mappedBy = "client")
+    private List<Commende>commendes=new ArrayList<>();
+
+    public List<Commende> getCommendes() {
+        return commendes;
+    }
+
+    public void setCommendes(List<Commende> commendes) {
+        this.commendes = commendes;
+    }
     
     
  

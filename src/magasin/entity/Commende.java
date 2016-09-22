@@ -45,6 +45,15 @@ public class Commende implements Serializable {
     @ManyToOne
     @JoinColumn(name = "clint_id")
     private Client clint;
+
+    
+    
+    
+    
+    
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
     
     
     
